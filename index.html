@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      background-color: hsl(233, 47%, 7%);
+      color:white;
+    }
+    .container{
+position: absolute;
+transform: translate(-50%,-50%);
+left:50%;
+top:50%;
+font-family: "Lexend Deca", sans-serif;
+border-radius: 10px;
+    }
+   .overlay{
+    background-color: hsl(277, 64%, 61%);
+    z-index: 1;
+    
+   }
+   .image-container {
+      position: relative;
+      border-radius: 10px;
+
+    }
+    .image-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: hsl(277, 64%, 61%);
+      z-index: 1;
+      opacity: 0.7;
+  border-radius: 0px 10px 10px 0px;
+    }
+
+    .image {
+      display: block; 
+      max-width: 100%;
+      border-radius: 0px 10px 10px 0px;
+     }
+     .section{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+     }
+      .sec2{
+        color: hsla(0, 0%, 100%, 0.75);
+        font-family: "Inter", sans-serif;
+      
+      }
+      .sec1{
+        font-weight: 700;
+          font-size: 30px;
+      }
+      .text-container{
+        border-radius: 10px 0px 0px 10px;
+      }
+      @media screen and (max-width: 425px) {
+        .container{
+border-radius: 10px;
+}
+        .row {
+    flex-direction: column-reverse;
+}
+.image-container::before {
+  border-radius: 10px 10px 0px 0px;
+}
+.image {
+  border-radius: 10px 10px 0px 0px;
+}
+.section{
+      display: flex;
+    flex-direction: column;
+     }
+      }
+     
+    </style>
+</head>
+<body>
+<div class="container ">
+  <div class="row p-0">
+    <div class="text-container col-sm-12 col-md-6 p-5 m-0" style="background-color: hsl(244, 38%, 16%)">
+  <h1 style="font-size: 6vh;" class="pb-3">
+   Get <span style="color:hsl(277, 64%, 61%);" >Insights</span> that help your business grow.</h1>
+
+  <p class="pt-3" style="color: hsla(0, 0%, 100%, 0.75);">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+  experience, and overall efficiency.</p>
+<div class="d-flex section pt-5">
+  <div>
+  <span class="sec1">10k+</span><br>
+  <span class="sec2">companies</span> 
+  </div>
+  <div>
+    <span class="sec1">314</span> <br>
+    <span class="sec2"> templates</span> 
+  </div>
+  <div>
+    <span class="sec1"> 12M+ </span> <br>
+    <span class="sec2">queries</span> 
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-6 image-container p-0">
+  <img src="images/image-header-desktop.jpg" width="100%" alt="image-header-desktop" class="image"/>
+</div>
+</div>
+</div>
+
+</body>
+</html>
